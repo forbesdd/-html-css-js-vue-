@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <style>
+            .box{
+              width: 200px;
+              height: 300px;
+              background-color: #a42e2e;
+              background-image: url(./imgs/1.jpeg);
+            }
+
+      </style>
+</head>
+<body>
+
+      <div class="box"></div>
+
+
+      <img src="./imgs/1.jpeg" alt="">
+      <script>
+      //様式操作
+            const box = document.querySelector('div')
+            box.style.width = '300px'
+            box.style.backgroundColor = 'pink'
+            box.style.borderTopColor = `blue`
+            box.style.border = '2px solid blue'
+            box.style.borderTop = '2px dotted red'
+            box.style.borderImage = `./imgs/1.jpeg`
+
+      //写真入れ替え
+            function getRandom(N,M){
+                  return Math.floor(Math.random() * (M - N + 1)) + N
+            }
+            
+            const img = document.querySelector(`img`)
+
+            const random = getRandom(1,6)
+
+            img.src = `./imgs/${random}.jpeg`
+      </script>
+</body>
+</html>

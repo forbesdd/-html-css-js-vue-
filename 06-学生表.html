@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            /* body{
+                  text-align: center;
+            } */
+          table{
+            width:600px;
+            text-align: center;
+          }
+          table,
+          th,
+          td{
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+          }
+          caption{
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+          }
+          tr{
+            height: 40px;
+            cursor: pointer;
+          }
+          table tr:nth-child(1){
+            background-color: #ddd;
+          }
+          table tr:not(:first-child):hover{
+            background-color: #eee;
+          }
+           
+
+
+      
+
+      </style>
+</head>
+<body>
+      <h1>学生成績表</h1>
+
+      <table>
+            <caption>学生名簿</caption>
+            <tr>
+                  <th>学生番号</th>
+                  <th>名前</th>
+                  <th>年齢</th>
+                  <th>性別</th>
+                  <th>住所</th>
+                  <th>備考</th>
+            </tr>
+            <script>
+                  let student = [
+                        {name:'田中',age:18,gender:'男',hometown: '東京'},
+                        {name:'木村',age:28,gender:'女',hometown: '京都'},
+                        {name:'中村',age:38,gender:'男',hometown: '東京'},
+                        {name:'川崎',age:28,gender:'男',hometown: '奈良'},
+                        {name:'中居',age:58,gender:'女',hometown: '東京'},
+                        {name:'川村',age:38,gender:'男',hometown: '名古屋'},
+                        {name:'金子',age:58,gender:'女',hometown: '大阪'},
+                        {name:'金子',age:58,gender:'女',hometown: '大阪'},
+                        {name:'金子',age:58,gender:'女',hometown: '大阪'},
+                        {name:'金子',age:58,gender:'女',hometown: '大阪'},
+                        {name:'金子',age:58,gender:'女',hometown: '大阪'}
+                  ] 
+                  for(let i = 0; i < student.length; i++){
+                        document.write(`
+                              <tr>
+                                    <td>${i + 1}</td>
+                                    <td>${student[i].name}</td>
+                                    <td>${student[i].age}</td>
+                                    <td>${student[i].gender}</td>
+                                    <td>${student[i].hometown}</td>                           
+                              </tr>
+                        `)
+      
+                  }    
+      
+            </script>
+            
+      </table>
+      
+</body>
+</html>
